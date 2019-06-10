@@ -30,6 +30,6 @@ app.get('/profile/:id',(req,res)=>{profile.handleProfile(req,res,db)});
 app.put('/image', (req,res)=>{image.handlesImage(req,res,db)});
 app.post('/imageUrl', (req,res)=>{image.handleApiCall(req,res)});
 
-app.listen(3000,()=>{
-    console.log('app is running successfully on 3000!!!');
+app.listen(process.env.PORT||3000,()=>{
+    console.log(`app is running successfully on ${process.env.PORT}`);
 });
